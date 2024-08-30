@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "create-armed-for-war",
+	"version": "${version}",
+	"name": "Create: Armed For War",
+	"description": "Create Mod wasn't destructive enough, so we decided to partner (USE AS AN DEPENDENCY) with Big Cannons to make weaponry on a different scale.",
+	"authors": [
+		"TheFisherGuyG0d!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/create-armed-for-war/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.CreateArmedForWar"
+		],
+		"client": [
+			"name.modid.CreateArmedForWarClient"
+		],
+		"fabric-datagen": [
+			"name.modid.CreateArmedForWarDataGenerator"
+		]
+	},
+	"mixins": [
+		"create-armed-for-war.mixins.json",
+		{
+			"config": "create-armed-for-war.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
